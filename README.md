@@ -1,5 +1,5 @@
 # VideoToText
-A tool to create scripts from videos
+A tool to extract text from videos.
 
 ## Activate venv environment
 
@@ -11,8 +11,10 @@ Execute the command on the root of the project:
 ```
 
 ## Execution
-This tool must be called by terminal, passing the video absolute filepath as argument.
-Ex.: `python main.py filepath.mp4`
+This tool must be called by terminal, passing the video absolute filepath as argument. For example:
+```
+python main.py filepath.mp4
+```
 
 ## Requirements
 Need to install libraries from requirements.txt and also from [Libav](https://libav.org/download/)
