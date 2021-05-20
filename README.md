@@ -1,7 +1,7 @@
 # VideoToText
 A tool to extract text from videos.
 
-## Activate venv environment
+## Activate environment
 
 ### Windows
 
