@@ -48,13 +48,14 @@ def recognize_text(audio_filepath_wav):
 if __name__ == '__main__':
     arguments = parse_args()
 
-    if not os.path.exists(arguments.file):
+    if not os.path.isfile(arguments.file):
         print(f'{arguments.file} not found')
-    
-    audio_mp3 = extract_audio(arguments.file)
-    audio_wav = convert_mp3_to_wav(audio_mp3)
-    text = recognize_text(audio_wav)
+    else:
+        filepath = arguments.file
+        audio_mp3 = extract_audio(filepath)
+        audio_wav = convert_mp3_to_wav(audio_mp3)
+        text = recognize_text(audio_wav)
 
-    os.remove(audio_mp3)
-    os.remove(audio_wav)
-    print(text)
+        os.remove(audio_mp3)
+        os.remove(audio_wav)
+        print(text)
